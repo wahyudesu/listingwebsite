@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+      - BROWSER_WS_ENDPOINT=ws://browserless:3000
+      - CLOUDFLARE_ACCOUNT_ID=${CLOUDFLARE_ACCOUNT_ID:-}
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN:-}
+    depends_on:
+      - browserless
+    restart: unless-stopped
+
+  browserless:
+    build:
+      context: .
+      dockerfile: Dockerfile.browserless
+    ports:
+      - "3002:3000"
+    restart: unless-stopped

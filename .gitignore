@@ -4,8 +4,8 @@ node_modules/
 .pnp.js
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 next-env.d.ts
 *.tsbuildinfo
 
@@ -15,11 +15,11 @@ next-env.d.ts
 dist/
 
 # testing
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+coverage/
 
 # misc
 .DS_Store

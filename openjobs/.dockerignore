@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# build outputs
+.next/
+out/
+
+# environment files
+.env
+.env.*
+!.env.example
+
+# dev/config files
+.git/
+.gitignore
+biome.json
+components.json
+postcss.config.mjs
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# misc
+README.md
+AGENTS.md
+CLAUDE.md
+Dockerfile
+.dockerignore
+docker-compose*.yml

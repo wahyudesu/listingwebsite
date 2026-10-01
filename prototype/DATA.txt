@@ -1,0 +1,104 @@
+DATA LOWONGAN KERJA HASIL WEB SCRAPING — GROUP 1–5
+Tanggal pengambilan: 19 Agustus 2026 (GMT+7)
+Format field: nama pekerjaan | lokasi | nama perusahaan | link
+
+============================================================
+GROUP 1
+============================================================
+
+[JOBSTREET] https://id.jobstreet.com/
+1. Native English Teacher | Jakarta Raya | Nuansa Edukasi Indonesia | https://id.jobstreet.com/id/job/92988773?type=standard&ref=search-standalone&origin=cardTitle
+2. Koordinator Gudang | Jakarta Utara, Jakarta Raya | PT Lancar Inti Nusantara | https://id.jobstreet.com/id/job/93215089?type=standard&ref=search-standalone&origin=cardTitle
+3. Production Team Leader | Cikarang Selatan, Jawa Barat | PT CFU Technology Indonesia | https://id.jobstreet.com/id/job/93504064?type=standard&ref=search-standalone&origin=cardTitle
+
+[PINTARNYA] https://pintarnya.com/
+1. Logistic Admin Intern | Kota Adm. Jakarta Selatan, DKI Jakarta | Mitra Premium Pintarnya | https://pintarnya.com/lowongan/logistic-admin-1080768
+2. Customer Service Digital | Kota Adm. Jakarta Selatan, DKI Jakarta | Mitra Premium Pintarnya | https://pintarnya.com/lowongan/customer-service-1089284
+3. Social Media Officer | Kota Adm. Jakarta Selatan, DKI Jakarta | Mitra Premium Pintarnya | https://pintarnya.com/lowongan/social-media-1089314
+
+[TOPLOKER] https://toploker.com/
+1. Desk Collection | Lokasi tidak ditampilkan | PT Colmitra Persada Indonesia | https://toploker.com/lowongan/2025-04-15!desk-collection1994!di!pt-colmitra-persada-indonesia-2025-04-15
+2. Marketing | Lokasi tidak ditampilkan | PT Arull Onshop | https://toploker.com/lowongan/2026-07-04!marketing!di!pt-arull-onshop-2026-06-27
+3. Business Partner | Lokasi tidak ditampilkan | PT Amartha Mikro Fintek | https://toploker.com/lowongan/2026-05-08!business-partner-631!di!pt-amartha-mikro-fintek
+
+============================================================
+GROUP 2
+============================================================
+
+[INDEED] https://id.indeed.com/
+1. On-Site Quality Assurance Technician (Indonesia) | Jakarta | Lululemon | https://id.indeed.com/viewjob?jk=52e1e86935aa3983
+2. Community Development-Indonesia | Indonesia | Perusahaan tidak ditampilkan | https://id.indeed.com/viewjob?jk=ad4436d29f6a3db5
+3. Consultant, Strategic Initiatives - Indonesia | Jakarta | IIX Global | https://id.indeed.com/viewjob?jk=4d42ce9bb1ae0b46
+
+[KITALULUS] https://kitalulus.com/
+1. Gabung Freel
+ance Online Admin WFH Dapat Uang Jajan Tanpa KTP 10.000-60.0000 -DL | Jakarta Timur, DKI Jakarta | Misi Seru - KitaLulus | https://id.kitalulus.com/lowongan/detail/seri-iv-misi-seru-freelance-wfh-dapatkan-reward-10-v4fb
+2. Staff Account Receivable (Finance) | Kabupaten Bogor, Jawa Barat | PT Sigma Bimed | https://id.kitalulus.com/lowongan/detail/admin-finance-ar-qee8
+3. Gardener | Kabupaten Badung, Bali | PT Kayu Mebel Indonesia | https://id.kitalulus.com/lowongan/detail/gardener-4jd9
+
+[HIREDTODAY] https://www.hiredtoday.com/
+1. Staff Advertiser FNB | Surakarta, Jawa Tengah | Abata Donuts & Coffee | https://www.hiredtoday.com/id/jobs/cities/central-java/18077-surakarta/
+2. Baker | Surakarta, Jawa Tengah | Abata Donuts & Coffee | https://www.hiredtoday.com/id/jobs/cities/central-java/18077-surakarta/
+3. Crew Outlet | Surakarta, Jawa Tengah | Abata Donuts & Coffee | https://www.hiredtoday.com/id/jobs/cities/central-java/18077-surakarta/
+
+============================================================
+GROUP 3
+============================================================
+
+[LINKEDIN] https://www.linkedin.com/
+1. Spontaneous application | Yaur, Papua, Indonesia | Praim | https://id.linkedin.com/jobs/view/spontaneous-application-at-praim-4450394098
+2. Can't find the perfect position? | Yaur, Papua, Indonesia | Dev-Heroes | https://id.linkedin.com/jobs/view/can%C2%B4t-find-the-perfect-position%3F-at-dev-heroes-4449128854
+3. How to use Rows | Yaur, Papua, Indonesia | QAILT | https://id.linkedin.com/jobs/view/how-to-use-rows-at-qailt-4453117107
+
+[KARIR.COM] https://karir.com/
+1. Office Boy | Prov. DKI-Jakarta | PT Bina Talenta | https://karir.com/opportunities/1401396
+2. Baker | Jakarta Utara | PT KOOMA BOGA INDONESIA | https://karir.com/search-lowongan?query=Baker
+3. Admin Trade Service Counter Perbankan | Prov. DKI-Jakarta | PT Bina Talenta | https://karir.com/opportunities/1401363
+
+[GETREDY] https://www.getredy.id/
+1. Account Executive | Lokasi tidak ditampilkan | PT EKA MAS REPUBLIK | https://www.getredy.id/
+2. Community Officer | Lokasi tidak ditampilkan | BTPN SYARIAH | https://www.getredy.id/
+3. Customer Service | Lokasi tidak ditampilkan | PT EKA MAS REPUBLIK | https://www.getredy.id/lowongan/1
+
+============================================================
+GROUP 4
+============================================================
+
+[GLINTS] https://glints.com/id/
+1. [Part-time] - Pengajar Bahasa Inggris - Praya | Jakarta Pusat, DKI Jakarta | Ruangguru | https://glints.com/id/opportunities/jobs/part-time-pengajar-bahasa-inggris-praya/8ad3b753-f5ed-454c-8a74-990b07a49ddd
+2. [Part-time] - Pengajar Bahasa Inggris - Bima | Jakarta Pusat, DKI Jakarta | Ruangguru | https://glints.com/id/opportunities/jobs/part-time-pengajar-bahasa-inggris-bima/f2367260-f5ad-49cc-93e9-00d4da9f4590
+3. INTERNSHIP - DIGITAL MEDIA (JAKARTA) | Jakarta Pusat, DKI Jakarta | PT Summarecon Agung Tbk | https://glints.com/id/opportunities/jobs/internship-digital-media-jakarta/3759d067-5bf9-4b2d-82bd-9cbad4fd0f81
+
+[LOKER.ID] https://www.loker.id/
+1. Guru Bahasa Mandarin | Surabaya | Yixi Mandarin Learning Center | https://www.loker.id/cari-lowongan-kerja?jobid=15892988
+2. Graphic Designer Social Media | Jakarta Utara | PT.NANO SNG | https://www.loker.id/cari-lowongan-kerja?jobid=15892983
+3. Helper Sample Team (Daily Worker) | Jakarta Barat | PT HANA FASHION INDONESIA | https://www.loker.id/cari-lowongan-kerja?jobid=15892959
+
+[KARIRHUB KEMNAKER] https://karirhub.kemnaker.go.id/
+Status: Daftar lowongan publik tidak berhasil diverifikasi. Tidak ada data yang dimasukkan.
+
+============================================================
+GROUP 5
+============================================================
+
+[DEALLS] https://dealls.com/
+1. IT Sales Specialist | Jakarta Selatan | Optima Daya Solusi | https://dealls.com/loker/it-sales-specialist~optimadayasolusicom
+2. Sales & Strategy Intern | Tangerang Regency | Segari | https://dealls.com/loker/sales-and-strategy-intern-2~segari
+3. Warehouse Supervisor | Tangerang Regency | Segari | https://dealls.com/loker/warehouse-supervisor-15~segari
+
+[KALIBRR] https://www.kalibrr.com/
+1. Senior Mechanic | Bengkalis, Indonesia | PT Berkat Karimar Mandiri (BKM) | https://www.kalibrr.id/c/pt-berkat-karimar-mandiri-bkm/jobs
+2. Fullstack Java Developer | Central Jakarta, Indonesia | PT Prismalink International | https://www.kalibrr.id/c/pt-prismalink-international/jobs
+3. Accounting and Tax Manager | Bandar Lampung, Indonesia | PT Agung Putra Niaga Mandiri | https://www.kalibrr.id/c/pt-agung-putra-niaga-mandiri/jobs
+
+============================================================
+CATATAN VALIDASI
+============================================================
+
+- Total data: 39 lowongan kerja.
+- Jumlah sumber: 13 sumber aktif (dari 14; KarirHub Kemnaker tidak ada data publik yang terverifikasi).
+- Masing-masing sumber: 3 lowongan.
+- Data diambil dari daftar lowongan publik yang dapat diakses pada tanggal pengambilan.
+- Beberapa situs menggunakan tautan daftar/perusahaan, bukan tautan detail individual, karena portal menggunakan render dinamis atau membatasi akses publik.
+- Data lowongan dapat berubah, ditutup, atau dihapus oleh situs sumber setelah tanggal pengambilan.
+- Struktur dokumen NoSQL yang disarankan: source_group, source_website, job_title, location, company, url, scraped_at, verification_status.
