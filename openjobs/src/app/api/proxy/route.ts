@@ -55,7 +55,7 @@ export async function GET(request: Request) {
   try {
     const html = await withTimeout(
       renderPage(url, target, proxyOrigin),
-      12_000,
+      20_000,
     );
     cache.set(url, { html, at: Date.now() });
     return new Response(html, {

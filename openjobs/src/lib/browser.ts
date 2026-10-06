@@ -7,14 +7,32 @@ export const BROWSER_UA =
 let browser: Browser | null = null;
 let connecting: Promise<Browser> | null = null;
 
-export type BrowserMode = "cloudflare" | "local" | "browserless";
+export type BrowserMode = "cloudflare" | "local" | "browserless" | "lightpanda";
 
 export async function getBrowser(mode?: BrowserMode): Promise<Browser> {
   const targetMode = mode || env.BROWSER_TYPE;
 
+  // Auto-detect: prefer lightpanda kalo token ada
+  if (!targetMode && process.env.LPD_TOKEN) {
+    return getBrowser("lightpanda");
+  }
+
   if (browser?.isConnected()) return browser;
   if (!connecting) {
     connecting = (async () => {
+      if (targetMode === "lightpanda") {
+        if (!process.env.LPD_TOKEN) {
+          throw new Error(
+            "LPD_TOKEN wajib diisi untuk Lightpanda Cloud",
+          );
+        }
+        browser = await chromium.connectOverCDP(
+          `wss://euwest.cloud.lightpanda.io/ws?token=${process.env.LPD_TOKEN}`,
+          { timeout: 10_000 },
+        );
+        return browser;
+      }
+
       if (targetMode === "local") {
         browser = await chromium.launch({ headless: true });
         return browser;
@@ -71,7 +89,21 @@ export async function closeBrowser(): Promise<void> {
 }
 
 export async function newPage(mode?: BrowserMode): Promise<Page> {
-  const b = await getBrowser(mode);
+  let b = await getBrowser(mode);
+
+  // Lightpanda hanya support 1 browser context — tutup yg sebelumnya
+  const contexts = b.contexts();
+  for (const ctx of contexts) {
+    await ctx.close().catch(() => {});
+  }
+
+  // Kalo context sebelumnya udah di-close, browser mati — reconnect
+  if (!b.isConnected()) {
+    browser = null;
+    connecting = null;
+    b = await getBrowser(mode);
+  }
+
   const context = await b.newContext({
     locale: "id-ID",
     userAgent: BROWSER_UA,
