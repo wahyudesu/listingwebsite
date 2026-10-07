@@ -54,7 +54,7 @@ export const JOBS: Job[] = [
     company: "Nuansa Edukasi Indonesia",
     source: SOURCES.jobstreet.name,
     mode: SOURCES.jobstreet.mode,
-    url: "https://id.jobstreet.com/id/job/92988773?type=standard&ref=search-standalone&origin=cardTitle",
+    url: "https://id.jobstreet.com/id/job/94972691?type=standard&ref=search-standalone#sol=9064b78c98bc35d276b3a803428a5ef4b503ff08",
   },
   {
     id: "jobstreet-2",

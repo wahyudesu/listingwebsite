@@ -9,6 +9,11 @@ let connecting: Promise<Browser> | null = null;
 
 export type BrowserMode = "cloudflare" | "local" | "browserless" | "lightpanda";
 
+const lightpanda_browser_cloud = `wss://euwest.cloud.lightpanda.io/ws?token=${process.env.LPD_TOKEN}`;
+const lightpanda_browser_hosted = "ws://43.134.15.94:9222";
+
+//ws://43.134.15.94:9222/
+
 export async function getBrowser(mode?: BrowserMode): Promise<Browser> {
   const targetMode = mode || env.BROWSER_TYPE;
 
@@ -21,15 +26,9 @@ export async function getBrowser(mode?: BrowserMode): Promise<Browser> {
   if (!connecting) {
     connecting = (async () => {
       if (targetMode === "lightpanda") {
-        if (!process.env.LPD_TOKEN) {
-          throw new Error(
-            "LPD_TOKEN wajib diisi untuk Lightpanda Cloud",
-          );
-        }
-        browser = await chromium.connectOverCDP(
-          `wss://euwest.cloud.lightpanda.io/ws?token=${process.env.LPD_TOKEN}`,
-          { timeout: 10_000 },
-        );
+        browser = await chromium.connectOverCDP(lightpanda_browser_hosted, {
+          timeout: 10_000,
+        });
         return browser;
       }
 
@@ -68,7 +67,10 @@ export async function getBrowser(mode?: BrowserMode): Promise<Browser> {
           });
           return browser;
         } catch (err) {
-          console.warn("Cloudflare CDP failed, falling back to local chromium:", String(err));
+          console.warn(
+            "Cloudflare CDP failed, falling back to local chromium:",
+            String(err),
+          );
         }
       }
 
@@ -86,6 +88,38 @@ export async function closeBrowser(): Promise<void> {
     await browser.close().catch(() => {});
     browser = null;
   }
+}
+
+let pageLock: Promise<unknown> = Promise.resolve();
+
+async function acquirePage(mode?: BrowserMode): Promise<Page> {
+  try {
+    return await newPage(mode);
+  } catch {
+    // Connection kemungkinan udah mati (Lightpanda reset state) — reconnect sekali
+    browser = null;
+    connecting = null;
+    return await newPage(mode);
+  }
+}
+
+export async function withPage<T>(
+  fn: (page: Page) => Promise<T>,
+  mode?: BrowserMode,
+): Promise<T> {
+  const run = pageLock.then(async () => {
+    const page = await acquirePage(mode);
+    try {
+      return await fn(page);
+    } finally {
+      await page
+        .context()
+        .close()
+        .catch(() => {});
+    }
+  });
+  pageLock = run.catch(() => {});
+  return run;
 }
 
 export async function newPage(mode?: BrowserMode): Promise<Page> {
@@ -118,5 +152,5 @@ export async function navigate(page: Page, url: string): Promise<void> {
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20_000 });
   await page
     .waitForLoadState("networkidle", { timeout: 1_000 })
-    .catch(() => { });
+    .catch(() => {});
 }

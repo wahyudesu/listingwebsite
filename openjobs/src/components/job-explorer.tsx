@@ -42,12 +42,10 @@ interface JobExplorerProps {
 export default function JobExplorer({ query, jobs }: JobExplorerProps) {
   const router = useRouter();
   const [selected, setSelected] = useState<Job | null>(null);
-  const [hovered, setHovered] = useState<Job | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [sidebarHidden, setSidebarHidden] = useState(false);
   const [loginPrompt, setLoginPrompt] = useState(false);
   const previewRef = useRef<HTMLDivElement | null>(null);
-  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Kalau query berubah, pertahankan selected hanya jika masih ada di hasil baru
   const prevQueryRef = useRef(query);
@@ -65,24 +63,6 @@ export default function JobExplorer({ query, jobs }: JobExplorerProps) {
     return () =>
       document.removeEventListener("fullscreenchange", onFullscreenChange);
   }, []);
-
-  useEffect(
-    () => () => {
-      if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    },
-    [],
-  );
-
-  function handleMouseEnter(job: Job) {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    hoverTimer.current = setTimeout(() => setHovered(job), 300);
-  }
-
-  function handleMouseLeave() {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    hoverTimer.current = null;
-    setHovered(null);
-  }
 
   function toggleFullscreen() {
     if (document.fullscreenElement) {
@@ -150,8 +130,6 @@ export default function JobExplorer({ query, jobs }: JobExplorerProps) {
                   <div className="relative rounded-lg">
                     <button
                       type="button"
-                      onMouseEnter={() => handleMouseEnter(job)}
-                      onMouseLeave={handleMouseLeave}
                       onClick={() => setSelected(job)}
                       className={cn(
                         "w-full rounded-lg px-4 py-3 text-left transition-colors hover:bg-muted",
@@ -250,15 +228,6 @@ export default function JobExplorer({ query, jobs }: JobExplorerProps) {
           )}
         </div>
       </section>
-
-      {hovered && hovered.id !== selected?.id && (
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -left-[9999px] top-0 h-[800px] w-[1200px] overflow-hidden"
-        >
-          <JobPreview job={hovered} />
-        </div>
-      )}
 
       <Dialog open={loginPrompt} onOpenChange={setLoginPrompt}>
         <DialogContent showCloseButton={false}>
